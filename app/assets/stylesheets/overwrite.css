@@ -1,0 +1,69 @@
+body {
+	background:transparent;
+	min-height:100%; 	
+	-webkit-font-smoothing: antialiased;
+	-webkit-overflow-scrolling: touch;
+	line-height: 1.5em;
+	font-size:14px;
+	font-family: Helvetica, Arial, sans-serif;
+	color:#fff;
+	font-weight: normal;
+}
+
+video {
+    position: fixed;
+    opacity: 0.5;
+    right: 0;
+    top: 0;
+    z-index: -1;
+}
+.title,
+.subtitle { 
+	font-family: 'Shadows Into Light', cursive, Helvetica, Arial, sans-serif;
+	font-weight:normal;
+	font-size:5em;
+	margin:80px auto; 
+	color:#FDF9F4; 
+	line-height:1em;
+}
+.subtitle { 
+	margin:40px auto; 
+	font-size:4em;
+}
+
+.section { 
+	z-index: 1;
+	min-height: 420px;
+	width: 100%;
+	overflow: auto;
+	height: 100%;
+    margin: 0 auto;
+	padding-top: 20px;
+	padding-bottom: 50px;
+	display: block;
+	top:0;
+} 
+container{
+    text-align: center;
+
+}
+h5{
+	text-align:left;
+}
+
+.alert{
+	width: 80%;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}
+.alert-danger{
+	background-color: rgba(0,0,0,.5);
+}
+.mainmenu{
+	color: #ff0000;
+}
+
+@media (min-width: 768px) {
+	.mainmenu { position: relative; }
+}

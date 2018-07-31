@@ -1,0 +1,32 @@
+<%= form_with(model:@post, local:true, url: choose_new_or_edit) do |form| %>
+
+  <% if @post.errors.any? %>
+    <div class="alert alert-danger" role="alert">
+    <ul>
+      <% @post.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+      <% end %>
+    </ul>
+    </div>
+  <% end %>
+
+  <div class="new_post">
+    <table class="post_form">
+      <tr>
+        <td>
+          <%= form.text_area :content, class:'post_input',:size => "60x5",placeholder:"今の気持ちを一言で表現しよう！" %>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p class="btn_center">
+          <%= form.submit 'N E X T', class:'btn btn-default' %>
+          </p>
+        </td>
+      </tr>
+    </table>
+  </div>
+
+<% end %>
+
+<h5 class="text-center"><%= link_to "Go to HITOKOTO_LIST", posts_path %></h4>

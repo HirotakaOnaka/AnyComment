@@ -1,0 +1,39 @@
+<section class="section">
+<div class="container">
+  
+　<h2 class="text-center subtitle">CONFIRM</h2>
+
+
+  <div class="new_post">
+
+  <%= form_with(model: @post, url:posts_path, local: true) do |form| %>
+  <%= form.hidden_field :content %>
+　<div class="row">
+  <div class="col-md-offset-2 col-md-8">
+    <table class="post_confirm">
+      <tr>
+        <td>
+          <%= simple_format(@post.content) %>
+        </td>
+      </tr>
+    </table>
+  </div>
+  </div>
+  
+  <div class="btn_center">
+    <%= form.submit 'P O S T', class:'btn btn-warning' %>
+  </div>
+  <% end %>
+  
+  <div class="btn_center">
+    <%= form_with(model: @post, url:new_post_path, local: true, method: 'get') do |form| %>
+      <%= form.hidden_field :content %>
+      <%= form.submit "B A C K", name: 'back', class:'btn btn-default' %>
+    <% end %>
+  </div>
+  
+  </div>
+
+  
+</section>
+</div>

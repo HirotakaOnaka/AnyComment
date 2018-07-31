@@ -1,0 +1,23 @@
+<section class="section">
+<div class="container">
+
+<h2 class="text-center subtitle">Your HITOKOTO</h2>
+  <p><%= notice %></p>
+    <div class="row">
+    <% @posts.reverse_each do |post|%>
+	<div class="col-sm-6 col-md-4">
+	  <div class="thumbnail">
+		<div class="caption">
+          <p><%= post.content %></p>
+          <p>
+            <%= link_to '編集', edit_post_path(post.id), class:'btn btn-default' %>
+            <%= link_to '削除', post_path(post.id),method: :delete, data:{confirm: '削除しますか？'},class:'btn btn-primary' %>
+          </p>
+        </div>
+      </div>
+    </div>
+    <% end %>
+    </div>
+
+</div>
+</section>

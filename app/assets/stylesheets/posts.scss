@@ -1,0 +1,26 @@
+li{
+    list-style: none;
+    text-align: left;
+}
+
+.new_post{
+    width: 100%;
+}
+.post_form,.post_confirm{
+    margin-left: auto;
+    margin-right: auto;
+}
+.post_confirm{
+    margin-bottom: 30px;
+}
+.post_input{
+    width: 100%;
+    color: #fff;
+    background-color: rgba(255,255,255,.2);
+    border: none;
+    margin-bottom: 10px;
+}
+.btn_center {
+    text-align: center;
+    margin-bottom: 10px;
+}

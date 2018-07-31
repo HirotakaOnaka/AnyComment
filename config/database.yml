@@ -1,0 +1,21 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  
+  template: template0
+
+development:
+  <<: *default
+  database: AnyComment_development
+
+test:
+  <<: *default
+  database: AnyComment_test
+
+production:
+  <<: *default
+  database: AnyComment_production
+  username: AnyComment
+  password: <%= ENV['ANYCOMMENT_DATABASE_PASSWORD'] %>
